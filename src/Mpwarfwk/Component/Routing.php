@@ -16,6 +16,6 @@ class Routing {
     }
 
     public function getRouteController($url){
-        return "\Controller\Home\Home";
+        return "\Controller\Home";
     }
 } 
