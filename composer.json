@@ -1,16 +1,13 @@
 {
-    "name": "markaf/mpwarfwk-standard-edition",
-    "description": "Standard APP using MPWAR Framework",
+    "name": "markaf/mpwarfwkn",
+    "description": " MPWAR Framework",
     "license": "Apache-2.0",
     "keywords": [],
     "homepage": "https://github.com/markaf/mpwarfwk",
     "type": "project",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/markaf/mpwarfwk"
-        }
-    ],
+    "require": {
+        "php":">=5.3.2"
+    },
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {

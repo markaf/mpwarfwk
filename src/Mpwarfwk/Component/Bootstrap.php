@@ -6,6 +6,8 @@
  * Time: 17:58
  */
 
+namespace Mpwarfwk\Component;
+
 class Bootstrap {
 
     public function __construct(){
