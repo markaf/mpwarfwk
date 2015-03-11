@@ -13,4 +13,9 @@ class Bootstrap {
     public function __construct(){
         echo "Hola mundo!";
     }
-} 
+    public function run(){
+        $routing = new Routing();
+        $controller = $routing->getRouteController("/home");
+        $controller();
+    }
+}
