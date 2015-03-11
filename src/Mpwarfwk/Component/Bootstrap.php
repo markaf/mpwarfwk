@@ -15,7 +15,7 @@ class Bootstrap {
     }
     public function run(){
         $routing = new Routing();
-        $controller = $routing->getRouteController("/home");
-        $controller();
+        $routeController = $routing->getRouteController("/home");
+        $controller = new $routeController();
     }
 }
