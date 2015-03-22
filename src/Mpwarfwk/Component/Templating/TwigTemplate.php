@@ -2,31 +2,29 @@
 /**
  * Created by PhpStorm.
  * User: Marc
- * Date: 16/03/2015
- * Time: 19:47
+ * Date: 22/03/2015
+ * Time: 1:51
  */
 
 namespace Mpwarfwk\Component\Templating;
 
-use Smarty;
-
-class SmartyTemplate implements Templating {
+use Twig;
+class TwigTemplate implements Templating {
     public function __construct($path)
     {
         $this->pathToTemplates($path);
-        $this->view = new Smarty();
+        $loader = new \Twig_Loader_Filesystem($this->path);
+        $this->view = new \Twig_Environment($loader, array());
+        //$this->view = new Smarty();
     }
     public function render($template, $variables = null)
     {
         if(is_array($variables)) $this->assignVars($variables);
-        return $this->view->fetch($this->path.'/'.$template);
+        return $this->view->render($template, $this->variables);
     }
     public function assignVars($variables)
     {
-        foreach ($variables as $key => $value)
-        {
-            $this->view->assign($key,$value);
-        }
+        $this->variables = $variables;
     }
 
     public function pathToTemplates($path){

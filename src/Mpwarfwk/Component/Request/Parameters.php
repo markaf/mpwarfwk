@@ -31,4 +31,8 @@ class Parameters {
         }
         return false;
     }
+
+    public function getParameter(){
+        return $this->parameters;
+    }
 } 

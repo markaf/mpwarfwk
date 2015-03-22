@@ -6,8 +6,9 @@
  * Time: 19:48
  */
 
-class Templating {
-
-public function render($template, $variables = null);
-assignVars($variables);
-} 
+namespace Mpwarfwk\Component\Templating;
+interface Templating
+{
+    public function render($template, $variables = null);
+    public function assignVars($variables);
+}
