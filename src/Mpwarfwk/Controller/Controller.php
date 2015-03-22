@@ -15,10 +15,11 @@ use Mpwarfwk\Component\Container\Container;
 
 abstract class Controller {
     public function __construct(){
-        $this->container = new Container();
+
     }
 
     protected function get($service){
+        $this->container = new Container();
         return $this->container->get($service);
     }
 } 
